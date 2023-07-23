@@ -385,34 +385,6 @@
     <!-- Footer End -->
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-    var lazyBg = document.querySelectorAll(".space-background[data-bg]");
-
-    if ("IntersectionObserver" in window) {
-        var observer = new IntersectionObserver(function(entries, observer) {
-            entries.forEach(function(entry) {
-                if (entry.isIntersecting) {
-                    var target = entry.target;
-                    var bgImage = target.getAttribute("data-bg");
-                    target.style.backgroundImage = "url('" + bgImage + "')";
-                    observer.unobserve(target);
-                }
-            });
-        }, { rootMargin: "0px 0px 0px 0px" });
-
-        lazyBg.forEach(function(bg) {
-            observer.observe(bg);
-        });
-    } else {
-        // Fallback for browsers that don't support Intersection Observer
-        lazyBg.forEach(function(bg) {
-            var bgImage = bg.getAttribute("data-bg");
-            bg.style.backgroundImage = "url('" + bgImage + "')";
-        });
-    }
-});
-    </script>
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
